@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
    name = 'wemo',
    packages = ['wemo'],
-   version = '1.0.1',
+   version = '1.0.2',
    description = 'A Wemo API',
    author = 'Evan Young',
    url = 'https://github.com/DocCodes/wemo',
@@ -17,7 +17,8 @@ setup(
       'Programming Language :: Python :: 3.6'
    ],
    install_requires = [
-      'requests'
+      'requests',
+		'pytest'
    ],
    python_requires = '~=3.6'
 )

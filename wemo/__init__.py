@@ -8,7 +8,7 @@ __copyright__ = "Copyright 2017, Evan Young"
 __credits__ = "Evan Young"
 
 __license__ = "GNU GLPv3"
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __maintainer__ = "Evan Young"
 __status__ = "Development"
 
@@ -65,3 +65,6 @@ class switch:
 if __name__ == '__main__':
    print("Hello Console!")
    bd = switch('192.168.1.72')
+
+def test_main():
+	assert True
