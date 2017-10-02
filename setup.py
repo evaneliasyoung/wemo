@@ -13,7 +13,7 @@ setup(
       'Development Status :: 5 - Production/Stable',
       'Intended Audience :: Developers',
       'Topic :: Home Automation',
-      'License :: GNU GPLv3',
+      'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
       'Programming Language :: Python :: 3.6'
    ],
    install_requires = [
