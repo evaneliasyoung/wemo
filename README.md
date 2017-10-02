@@ -6,22 +6,17 @@
 [![Beta](https://img.shields.io/github/release/doccodes/wemo/all.svg?label=nightly)](https://github.com/DocCodes/wemo)
 
 ## Installation
-1. First download this git
-2. Change to the wemo directory
-3. Then use pip3 to install it
-
 ### Windows
-*See above to obtain code*
 ```
-cd wemo
-pip3 install .
+pip3 install wemo
 ```
-### Linux / macOS
+### macOS
 ```
-cd ~/Downloads
-git clone https://github.com/DocCodes/wemo
-cd wemo
-sudo -H pip3 install .
+sudo -H pip3 install wemo
+```
+### Linux
+```
+sudo pip3 install wemo
 ```
 
 ## How-To Use
@@ -36,5 +31,7 @@ output
 1 # The status of the light
 ```
 ## Requirements
+Any requirements will automatically be installed using the aforementioned installation method
+
 To install any modules use `pip3 install (module)`
 * requests
