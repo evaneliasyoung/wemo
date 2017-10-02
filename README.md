@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/DocCodes/wemo.svg?branch=master)](https://travis-ci.org/DocCodes/wemo)
 [![Documentation Status](http://img.shields.io/badge/docs-1.0.2-orange.svg?style=flat)](https://github.com/DocCodes/wemo/wiki)
-[![Release](https://img.shields.io/badge/release-1.0.2-brightgreen.svg)](https://github.com/DocCodes/wemo/releases/latest)
-[![Beta](https://img.shields.io/badge/beta-none-blue.svg)](https://github.com/DocCodes/wemo)
+[![Release](https://img.shields.io/github/release/doccodes/wemo.svg)](https://github.com/DocCodes/wemo/releases/latest)
+[![Beta](https://img.shields.io/github/release/doccodes/wemo/all.svg?label=nightly)](https://github.com/DocCodes/wemo)
 
 ## Installation
 1. First download this git
