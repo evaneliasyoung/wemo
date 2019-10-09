@@ -15,9 +15,10 @@ __status__ = "Production"
 
 class switch:
    def __init__(self, ip):
-      if(self.check(ip) == 0): exit
+      check_port_result = self.check(ip)
+      if(check_port_result == 0): exit
       self.ip = ip
-      self.port = self.check(ip)
+      self.port = check_port_result
       self.full = f'{self.ip}:{self.port}'
       self.url = f'http://{self.full}/upnp/control/basicevent1'
       self.status = self.getStatus()
