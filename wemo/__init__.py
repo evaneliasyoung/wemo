@@ -18,7 +18,7 @@ class switch:
     def __init__(self, ip: str) -> None:
         check_port_result = self.check(ip)
         if(check_port_result == 0):
-            exit
+            raise Exception(f'failed to determine management port for device at address {ip}')
         self.ip: str = ip
         self.port: int = check_port_result
         self.full: str = f'{self.ip}:{self.port}'
