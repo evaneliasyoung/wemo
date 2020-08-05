@@ -2,10 +2,10 @@
 """An easy way to integrate wemo switches
 """
 from requests import get, post
-from typing import Dict
+from typing import Dict, Optional
 
 __author__ = "Evan Elias Young"
-__copyright__ = "Copyright 2017-2019, Evan Elias Young"
+__copyright__ = "Copyright 2017-2020, Evan Elias Young"
 __credits__ = "Evan Elias Young"
 
 __license__ = "GNU GLPv3"
@@ -16,11 +16,11 @@ __status__ = "Production"
 
 class switch:
     def __init__(self, ip: str) -> None:
-        check_port_result = self.check(ip)
-        if(check_port_result == 0):
+        found_port: Optional[int] = switch.find_port(ip)
+        if not found_port:
             raise Exception(f'failed to determine management port for device at address {ip}')
         self.ip: str = ip
-        self.port: int = check_port_result
+        self.port: int = found_port
         self.full: str = f'{self.ip}:{self.port}'
         self.url: str = f'http://{self.full}/upnp/control/basicevent1'
         self.status: str = self.getStatus()
@@ -65,16 +65,14 @@ class switch:
         end: int = txt.index(f'</{tag}>')
         return txt[beg + ln:end]
 
-    def check(self, ip: str) -> int:
-        port: int = 0
-        for test in range(49152, 49156):
+    @staticmethod
+    def find_port(ip: str, timeout: float = 1.0) -> Optional[int]:
+        for port in range(49152, 49156):
             try:
-                get(f'http://{ip}:{test}')
+                get(f'http://{ip}:{port}', timeout=timeout)
+                return port
             except:
                 pass
-            else:
-                port = test
-        return port
 
 
 if __name__ == '__main__':
