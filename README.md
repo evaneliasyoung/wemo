@@ -5,6 +5,9 @@
 [![Release](https://img.shields.io/github/release/doccodes/wemo.svg)](https://github.com/DocCodes/wemo/releases/latest)
 [![Beta](https://img.shields.io/github/release/doccodes/wemo/all.svg?label=nightly)](https://github.com/DocCodes/wemo)
 
+ Project Retired, Use [ouimeaux](https://github.com/iancmcc/ouimeaux)
+This project is now considered retired. Future development of this package is made obselete by [ouimeaux](https://github.com/iancmcc/ouimeaux)
+
 ## Installation
 ### Windows
 ```
